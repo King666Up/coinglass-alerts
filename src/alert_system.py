@@ -8,7 +8,11 @@ import logging
 import time
 from datetime import datetime
 from typing import Dict, List, Any, Optional
-from .coinglass_api import CoinGlassAPI
+try:
+    from .coinglass_api import CoinGlassAPI
+except ImportError:
+    # 处理直接运行的情况
+    from coinglass_api import CoinGlassAPI
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart

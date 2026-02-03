@@ -50,5 +50,11 @@
     "level": "INFO",
     "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     "file": "logs/coinglass_alerts.log"
+  },
+  "github": {
+    "token": "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",
+    "username": "King666Up",
+    "repository": "coinglass-alerts",
+    "auto_sync": false
   }
 }
