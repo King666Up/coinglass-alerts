@@ -1,0 +1,54 @@
+{
+  "api": {
+    "base_url_capi": "https://capi.coinglass.com",
+    "base_url_fapi": "https://fapi.coinglass.com",
+    "base_url_liquidity": "https://capi.coinglass.com/liquidity-heatmap",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "Accept": "application/json, text/plain, */*",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+      "Origin": "https://www.coinglass.com",
+      "Referer": "https://www.coinglass.com/"
+    }
+  },
+  "alerts": {
+    "price_threshold": 0.05,
+    "volume_threshold": 1000000,
+    "oi_change_threshold": 0.02,
+    "funding_rate_threshold": 0.1,
+    "enable_price_alerts": true,
+    "enable_volume_alerts": true,
+    "enable_oi_alerts": true,
+    "enable_funding_rate_alerts": true
+  },
+  "monitoring": {
+    "symbols": ["BTC", "ETH", "SOL", "XRP", "ADA"],
+    "exchanges": ["Binance", "OKX", "Bybit", "Coinbase", "Huobi"],
+    "interval": "5m",
+    "lookback_period": 144
+  },
+  "notifications": {
+    "telegram": {
+      "enabled": false,
+      "bot_token": "",
+      "chat_id": ""
+    },
+    "email": {
+      "enabled": false,
+      "smtp_server": "smtp.gmail.com",
+      "smtp_port": 587,
+      "username": "",
+      "password": "",
+      "recipients": []
+    },
+    "console": {
+      "enabled": true
+    }
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "file": "logs/coinglass_alerts.log"
+  }
+}
